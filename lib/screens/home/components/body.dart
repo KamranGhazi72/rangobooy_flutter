@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rangobooy/screens/home/components/best_products.dart';
+import 'package:rangobooy/screens/home/components/carousel_slider.dart';
 import 'package:rangobooy/screens/home/components/categories.dart';
 import 'package:rangobooy/screens/home/components/discount_banner.dart';
 import 'package:rangobooy/screens/home/components/home_header.dart';
@@ -16,12 +17,13 @@ class Body extends StatelessWidget {
           SizedBox(height: getProportionateScreenHeight(20)),
           HomeHeader(),
           SizedBox(height: getProportionateScreenHeight(20)),
-          DiscountBanner(),
+          CarouselSliderMain(),
+          // DiscountBanner(),
           SizedBox(height: getProportionateScreenHeight(20)),
           Categories(),
           SizedBox(height: getProportionateScreenHeight(20)),
           SpecialOffers(),
-          SizedBox(height: getProportionateScreenWidth(30)),
+          SizedBox(height: getProportionateScreenWidth(20)),
           BestProducts(),
           SizedBox(height: getProportionateScreenWidth(30)),
         ],
