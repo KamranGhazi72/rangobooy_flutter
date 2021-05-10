@@ -16,7 +16,9 @@ class HomeHeader extends StatelessWidget {
           IconBtnWithCounter(
               svgSrc: 'assets/images/shopIcon.png', numOfItem: 0, press: () {}),
           IconBtnWithCounter(
-              svgSrc: 'assets/images/bellIcon.png', numOfItem: 3, press: () {}),
+              svgSrc: 'assets/images/bellIcon.png',
+              numOfItem: 13,
+              press: () {}),
         ],
       ),
     );

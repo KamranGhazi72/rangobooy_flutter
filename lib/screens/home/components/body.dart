@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:rangobooy/screens/home/components/best_products.dart';
+import 'package:rangobooy/screens/home/components/categories.dart';
+import 'package:rangobooy/screens/home/components/discount_banner.dart';
+import 'package:rangobooy/screens/home/components/home_header.dart';
+import 'package:rangobooy/screens/home/components/special_offers.dart';
 import 'package:rangobooy/size_config.dart';
-import 'home_header.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -11,6 +15,15 @@ class Body extends StatelessWidget {
         children: [
           SizedBox(height: getProportionateScreenHeight(20)),
           HomeHeader(),
+          SizedBox(height: getProportionateScreenHeight(20)),
+          DiscountBanner(),
+          SizedBox(height: getProportionateScreenHeight(20)),
+          Categories(),
+          SizedBox(height: getProportionateScreenHeight(20)),
+          SpecialOffers(),
+          SizedBox(height: getProportionateScreenWidth(30)),
+          BestProducts(),
+          SizedBox(height: getProportionateScreenWidth(30)),
         ],
       )),
     );

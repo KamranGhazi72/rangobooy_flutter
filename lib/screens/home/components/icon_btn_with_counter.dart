@@ -31,12 +31,13 @@ class IconBtnWithCounter extends StatelessWidget {
           ),
           if (numOfItem != 0)
             Positioned(
-                top: -3,
+                top: 0,
                 right: 0,
                 child: Container(
-                    margin: EdgeInsets.symmetric(vertical: 5),
-                    height: getProportionateScreenWidth(16),
-                    width: getProportionateScreenWidth(16),
+                    // margin: EdgeInsets.symmetric(vertical: 5),
+                    padding: EdgeInsets.all(5),
+                    // height: getProportionateScreenWidth(16),
+                    // width: getProportionateScreenWidth(16),
                     decoration: BoxDecoration(
                       color: Color(0xFFFF4848),
                       shape: BoxShape.circle,
@@ -46,7 +47,7 @@ class IconBtnWithCounter extends StatelessWidget {
                       child: Text(
                         '$numOfItem',
                         style: TextStyle(
-                          fontSize: getProportionateScreenWidth(10),
+                          fontSize: getProportionateScreenWidth(11),
                           height: 1,
                           fontWeight: FontWeight.w600,
                           color: Colors.white,
