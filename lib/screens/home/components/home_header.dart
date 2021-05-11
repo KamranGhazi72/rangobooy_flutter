@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rangobooy/screens/cart/cart_screen.dart';
 import 'package:rangobooy/screens/home/components/icon_btn_with_counter.dart';
 import 'package:rangobooy/screens/home/components/search_field.dart';
 import 'package:rangobooy/size_config.dart';
@@ -14,7 +15,12 @@ class HomeHeader extends StatelessWidget {
         children: [
           SearchField(),
           IconBtnWithCounter(
-              svgSrc: 'assets/images/shopIcon.png', numOfItem: 0, press: () {}),
+              svgSrc: 'assets/images/shopIcon.png',
+              numOfItem: 0,
+              press: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CartScreen()));
+              }),
           IconBtnWithCounter(
               svgSrc: 'assets/images/bellIcon.png',
               numOfItem: 13,
