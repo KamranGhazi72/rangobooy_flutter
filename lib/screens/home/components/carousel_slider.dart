@@ -54,9 +54,8 @@ class CarouselSliderMain extends StatelessWidget {
                       TextSpan(
                         text: i.detail,
                         style: TextStyle(
-                          fontSize: getProportionateScreenWidth(24),
-                          fontWeight: FontWeight.bold,
-                        ),
+                            fontSize: getProportionateScreenWidth(24),
+                            fontFamily: "LalezarRegular"),
                       ),
                     ],
                   ),

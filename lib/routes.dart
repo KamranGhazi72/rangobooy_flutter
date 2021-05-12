@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:rangobooy/screens/cart/cart_screen.dart';
+import 'package:rangobooy/screens/details/details_screen.dart';
 import 'package:rangobooy/screens/home/home_screen.dart';
 
 import 'package:rangobooy/screens/splash/splash_screen.dart';
@@ -26,7 +27,7 @@ final Map<String, WidgetBuilder> routes = {
   // CompleteProfileScreen.routeName: (context) => CompleteProfileScreen(),
   // OtpScreen.routeName: (context) => OtpScreen(),
   HomeScreen.routeName: (context) => HomeScreen(),
-  // DetailsScreen.routeName: (context) => DetailsScreen(),
+  DetailsScreen.routeName: (context) => DetailsScreen(),
   CartScreen.routeName: (context) => CartScreen(),
   // ProfileScreen.routeName: (context) => ProfileScreen(),
 };

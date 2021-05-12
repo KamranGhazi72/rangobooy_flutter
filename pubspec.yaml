@@ -64,12 +64,16 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: Aviny
+      fonts:
+        - asset: assets/fonts/Aviny2.ttf
+    - family: LalezarRegular
+      fonts:
+        - asset: assets/fonts/Lalezar-Regular.ttf
     - family: IRANSansFaNum
       fonts:
         - asset: assets/fonts/IRANSans(FaNum).ttf
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+    
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

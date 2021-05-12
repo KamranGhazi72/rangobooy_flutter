@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rangobooy/constants.dart';
 import 'package:rangobooy/models/Product.dart';
+import 'package:rangobooy/screens/details/details_screen.dart';
 import 'package:rangobooy/size_config.dart';
 
 class ProductCard extends StatelessWidget {
@@ -21,12 +22,11 @@ class ProductCard extends StatelessWidget {
       child: SizedBox(
         width: getProportionateScreenWidth(width),
         child: GestureDetector(
-          onTap: () {},
-          // onTap: () => Navigator.pushNamed(
-          //   context,
-          //   DetailsScreen.routeName,
-          //   arguments: ProductDetailsArguments(product: product),
-          // ),
+          onTap: () => Navigator.pushNamed(
+            context,
+            DetailsScreen.routeName,
+            arguments: ProductDetailsArguments(product: product),
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
