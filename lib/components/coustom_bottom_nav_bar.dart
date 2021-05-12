@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rangobooy/constants.dart';
 import 'package:rangobooy/enums.dart';
+import 'package:rangobooy/screens/category/category_screen.dart';
 import 'package:rangobooy/screens/home/home_screen.dart';
 // import 'package:shop_app/screens/profile/profile_screen.dart';
 
@@ -53,7 +54,9 @@ class CustomBottomNavBar extends StatelessWidget {
               ),
               IconButton(
                 icon: Icon(Icons.message_outlined),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, CategoryScreen.routeName);
+                },
               ),
               IconButton(
                   icon: Icon(
