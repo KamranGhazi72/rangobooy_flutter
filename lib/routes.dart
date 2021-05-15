@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:rangobooy/screens/cart/cart_screen.dart';
 import 'package:rangobooy/screens/category/category_screen.dart';
+import 'package:rangobooy/screens/category_product/product_category_screen.dart';
 import 'package:rangobooy/screens/details/details_screen.dart';
 import 'package:rangobooy/screens/home/home_screen.dart';
 
@@ -31,5 +32,6 @@ final Map<String, WidgetBuilder> routes = {
   DetailsScreen.routeName: (context) => DetailsScreen(),
   CartScreen.routeName: (context) => CartScreen(),
   CategoryScreen.routeName: (context) => CategoryScreen(),
+  ProductCategoryScreen.routeName: (context) => ProductCategoryScreen(),
   // ProfileScreen.routeName: (context) => ProfileScreen(),
 };

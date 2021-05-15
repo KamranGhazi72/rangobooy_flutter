@@ -7,7 +7,7 @@ class CategoriesListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height,
+      height: MediaQuery.of(context).size.height - 110,
       child: ListView.builder(
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
