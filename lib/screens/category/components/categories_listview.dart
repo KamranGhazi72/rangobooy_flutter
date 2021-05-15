@@ -35,7 +35,9 @@ class CategoriesListView extends StatelessWidget {
               ),
             ),
             Container(
-              height: 200,
+              height: 170,
+              padding: EdgeInsets.symmetric(
+                  horizontal: getProportionateScreenWidth(5)),
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 shrinkWrap: true,
@@ -45,8 +47,8 @@ class CategoriesListView extends StatelessWidget {
                     children: [
                       Padding(
                         padding: EdgeInsets.symmetric(
-                            horizontal: getProportionateScreenWidth(20),
-                            vertical: getProportionateScreenHeight(10)),
+                            horizontal: getProportionateScreenWidth(5),
+                            vertical: getProportionateScreenHeight(0)),
                         child: CatProductListView(
                             subCatName: categories[index].nameSubCat[indexSub],
                             subCatImg: categories[index].imgSubCat[indexSub]),

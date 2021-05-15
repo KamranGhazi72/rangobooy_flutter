@@ -9,16 +9,16 @@ class MainCategories {
 List<MainCategories> categories = [
   MainCategories(title: 'دیجیتال', nameSubCat: [
     'موبایل',
-    'تبلت',
+    'لبتاب',
     'لوازم جانبی',
     'کنسول بازی',
     'اسپیکر'
   ], imgSubCat: [
     'assets/images/mobile1.png',
-    'assets/images/mobile2.png',
-    'assets/images/mobile1.png',
-    'assets/images/mobile1.png',
-    'assets/images/mobile2.png'
+    'assets/images/macbook.png',
+    'assets/images/charger.png',
+    'assets/images/ps5.png',
+    'assets/images/PB300-speaker.png'
   ]),
   MainCategories(title: 'مد و پوشاک', nameSubCat: [
     'شلوار',
@@ -27,11 +27,11 @@ List<MainCategories> categories = [
     'زنانه',
     'مردانه'
   ], imgSubCat: [
-    'assets/images/mobile1.png',
-    'assets/images/mobile2.png',
-    'assets/images/mobile1.png',
-    'assets/images/mobile1.png',
-    'assets/images/mobile2.png'
+    'assets/images/pants.png',
+    'assets/images/shoesCat.png',
+    'assets/images/cloth-baby.png',
+    'assets/images/women-cloth.png',
+    'assets/images/t-shirt.png'
   ]),
   MainCategories(title: 'آشپزخانه', nameSubCat: [
     'ظرفشویی',
@@ -39,11 +39,10 @@ List<MainCategories> categories = [
     'یخچال',
     'لباس شویی'
   ], imgSubCat: [
-    'assets/images/mobile1.png',
-    'assets/images/mobile2.png',
-    'assets/images/mobile1.png',
-    'assets/images/mobile1.png',
-    'assets/images/mobile2.png'
+    'assets/images/washing.png',
+    'assets/images/plate.png',
+    'assets/images/yakhchal.png',
+    'assets/images/washing.png',
   ]),
   MainCategories(title: 'دکور', nameSubCat: [
     'گلدان',
@@ -52,11 +51,11 @@ List<MainCategories> categories = [
     'مبل',
     'آباژور'
   ], imgSubCat: [
-    'assets/images/mobile1.png',
-    'assets/images/mobile2.png',
-    'assets/images/mobile1.png',
-    'assets/images/mobile1.png',
-    'assets/images/mobile2.png'
+    'assets/images/abajour.png',
+    'assets/images/abajour.png',
+    'assets/images/abajour.png',
+    'assets/images/abajour.png',
+    'assets/images/abajour.png'
   ]),
   MainCategories(title: 'جواهرات', nameSubCat: [
     'انگشتر',
@@ -65,11 +64,11 @@ List<MainCategories> categories = [
     'اکسسوری',
     'طلا'
   ], imgSubCat: [
-    'assets/images/mobile1.png',
-    'assets/images/mobile2.png',
-    'assets/images/mobile1.png',
-    'assets/images/mobile1.png',
-    'assets/images/mobile2.png'
+    'assets/images/juwley.png',
+    'assets/images/juwley.png',
+    'assets/images/juwley.png',
+    'assets/images/juwley.png',
+    'assets/images/juwley.png'
   ]),
   MainCategories(title: 'زیبایی و سلامت', nameSubCat: [
     'لوازم آرایشی',

@@ -9,16 +9,24 @@ class CatProductListView extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image(
-          image: AssetImage(subCatImg),
-          fit: BoxFit.cover,
-          width: 100,
-          height: 100,
-        ),
-        Text(subCatName)
-      ],
+    return Container(
+      padding: EdgeInsets.all(5),
+      decoration: BoxDecoration(
+          color: Color(0xFFFAFAFA), borderRadius: BorderRadius.circular(6)),
+      child: Column(
+        children: [
+          Image(
+            image: AssetImage(subCatImg),
+            width: 100,
+            height: 100,
+          ),
+          SizedBox(height: 5),
+          Text(
+            subCatName,
+            style: TextStyle(color: Colors.black, fontSize: 13),
+          )
+        ],
+      ),
     );
   }
 }
