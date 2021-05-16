@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rangobooy/models/Product.dart';
+import 'package:rangobooy/screens/details/details_screen.dart';
 
 class ProductColumn extends StatelessWidget {
   @override
@@ -7,63 +10,140 @@ class ProductColumn extends StatelessWidget {
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       child: ListView.builder(
-        itemCount: 9,
+        physics: NeverScrollableScrollPhysics(),
+        itemCount: demoProducts.length,
         itemBuilder: (context, index) {
-          return Container(
-            height: 150,
-            color: Colors.amber,
-            margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-            child: Row(
-              children: [
-                Image(
-                  image: AssetImage('assets/images/macbook.png'),
-                  height: 100,
-                  width: 100,
-                  fit: BoxFit.cover,
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text('لبتاب macbook pro مدل a250 با حافظه 256 GB',
-                        maxLines: 3,
-                        style: const TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                        )),
-                    Row(
+          return InkWell(
+            onTap: () => Navigator.pushNamed(
+              context,
+              DetailsScreen.routeName,
+              arguments: ProductDetailsArguments(product: demoProducts[index]),
+            ),
+            child: Container(
+              height: 130,
+              margin: EdgeInsets.symmetric(horizontal: 15, vertical: 17),
+              padding: EdgeInsets.only(left: 10, top: 5, right: 0, bottom: 5),
+              decoration: BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(width: 0.5, color: Colors.grey),
+                      top: BorderSide(width: 1, color: Colors.red))),
+              child: Row(
+                // mainAxisAlignment:zrossAxisAlignment.center,
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Image(
+                      image: AssetImage(demoProducts[index].images[0]),
+                      height: 100,
+                      width: 100,
+                      // fit: BoxFit.cover,
+                    ),
+                  ),
+                  Expanded(
+                    flex: 3,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                          children: [
-                            Icon(Icons.note_rounded),
-                            const SizedBox(width: 5),
-                            Text(
-                              'موجود در انبار',
-                              style: const TextStyle(
-                                fontSize: 14,
+                        Text(demoProducts[index].title,
+                            maxLines: 3,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                                fontSize: 15,
                                 fontWeight: FontWeight.w600,
-                              ),
+                                color: Colors.black87)),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.notes_outlined,
+                                  color: Colors.blueAccent,
+                                  size: 20,
+                                ),
+                                const SizedBox(width: 5),
+                                Text(
+                                  'موجود در انبار',
+                                  style: const TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.blueAccent),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  '${demoProducts[index].rating}',
+                                  style: const TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.black),
+                                ),
+                                const SizedBox(width: 1),
+                                Icon(
+                                  Icons.star,
+                                  color: Color(0xFFFFD700),
+                                ),
+                              ],
                             ),
                           ],
                         ),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Text(
-                              '4.3',
-                              style: const TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
+                            Container(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 5, vertical: 2),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.red,
+                              ),
+                              child: Row(
+                                children: [
+                                  Icon(Icons.local_offer_outlined,
+                                      size: 15, color: Colors.white),
+                                  const SizedBox(width: 5),
+                                  Text(
+                                    '20%',
+                                    style: const TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w600,
+                                        color: Colors.white),
+                                  ),
+                                ],
                               ),
                             ),
-                            const SizedBox(width: 5),
-                            Icon(Icons.star),
+                            Row(
+                              children: [
+                                Text(
+                                  '${demoProducts[index].price}',
+                                  style: const TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.green),
+                                ),
+                                const SizedBox(width: 5),
+                                Text(
+                                  'تومن',
+                                  style: const TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.black),
+                                ),
+                              ],
+                            ),
                           ],
-                        ),
+                        )
                       ],
-                    )
-                  ],
-                )
-              ],
+                    ),
+                  )
+                ],
+              ),
             ),
           );
         },
