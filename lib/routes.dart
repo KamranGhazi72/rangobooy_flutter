@@ -4,6 +4,7 @@ import 'package:rangobooy/screens/category/category_screen.dart';
 import 'package:rangobooy/screens/category_product/product_category_screen.dart';
 import 'package:rangobooy/screens/details/details_screen.dart';
 import 'package:rangobooy/screens/home/home_screen.dart';
+import 'package:rangobooy/screens/profile/profile_screen.dart';
 
 import 'package:rangobooy/screens/splash/splash_screen.dart';
 // import 'package:shop_app/screens/cart/cart_screen.dart';
@@ -33,5 +34,5 @@ final Map<String, WidgetBuilder> routes = {
   CartScreen.routeName: (context) => CartScreen(),
   CategoryScreen.routeName: (context) => CategoryScreen(),
   ProductCategoryScreen.routeName: (context) => ProductCategoryScreen(),
-  // ProfileScreen.routeName: (context) => ProfileScreen(),
+  ProfileScreen.routeName: (context) => ProfileScreen(),
 };

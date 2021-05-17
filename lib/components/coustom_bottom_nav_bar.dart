@@ -3,7 +3,7 @@ import 'package:rangobooy/constants.dart';
 import 'package:rangobooy/enums.dart';
 import 'package:rangobooy/screens/category/category_screen.dart';
 import 'package:rangobooy/screens/home/home_screen.dart';
-// import 'package:shop_app/screens/profile/profile_screen.dart';
+import 'package:rangobooy/screens/profile/profile_screen.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({
@@ -15,7 +15,7 @@ class CustomBottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Color inActiveIconColor = Color(0xFFB6B6B6);
+    final Color inActiveIconColor = Color(0xFF989898);
     return Container(
       padding: EdgeInsets.symmetric(vertical: 14),
       decoration: BoxDecoration(
@@ -49,11 +49,21 @@ class CustomBottomNavBar extends StatelessWidget {
                     Navigator.pushNamed(context, HomeScreen.routeName),
               ),
               IconButton(
-                icon: Icon(Icons.favorite_outline),
+                icon: Icon(
+                  Icons.favorite_outline,
+                  color: MenuState.favourite == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                ),
                 onPressed: () {},
               ),
               IconButton(
-                icon: Icon(Icons.message_outlined),
+                icon: Icon(
+                  Icons.category_outlined,
+                  color: MenuState.message == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                ),
                 onPressed: () {
                   Navigator.pushNamed(context, CategoryScreen.routeName);
                 },
@@ -65,9 +75,9 @@ class CustomBottomNavBar extends StatelessWidget {
                         ? kPrimaryColor
                         : inActiveIconColor,
                   ),
-                  onPressed: () => {}
-                  // Navigator.pushNamed(context, ProfileScreen.routeName),
-                  ),
+                  onPressed: () => {
+                        Navigator.pushNamed(context, ProfileScreen.routeName),
+                      }),
             ],
           )),
     );
