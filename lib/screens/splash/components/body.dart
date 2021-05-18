@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:rangobooy/components/default_button.dart';
 import 'package:rangobooy/constants.dart';
 import 'package:rangobooy/screens/home/home_screen.dart';
+import 'package:rangobooy/screens/sign_in/sign_in_screen.dart';
 import 'package:rangobooy/screens/splash/components/splash_content.dart';
 import 'package:rangobooy/size_config.dart';
 // import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
@@ -68,11 +69,12 @@ class _BodyState extends State<Body> {
                     ),
                     Spacer(flex: 3),
                     DefaultButton(
-                      text: "Continue",
+                      text: "ادامه",
                       press: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HomeScreen()),
+                          MaterialPageRoute(
+                              builder: (context) => SignInScreen()),
                         );
                       },
                     ),
