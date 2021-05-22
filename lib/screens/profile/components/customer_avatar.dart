@@ -1,6 +1,28 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
-class CustomerAvatar extends StatelessWidget {
+class CustomerAvatar extends StatefulWidget {
+  @override
+  _CustomerAvatarState createState() => _CustomerAvatarState();
+}
+
+class _CustomerAvatarState extends State<CustomerAvatar> {
+  File _image;
+  final picker = ImagePicker();
+
+  Future getImage() async {
+    final pickedFile = await picker.getImage(source: ImageSource.camera);
+
+    setState(() {
+      if (pickedFile != null) {
+        _image = File(pickedFile.path);
+      } else {
+        print('No image selected.');
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,7 +32,11 @@ class CustomerAvatar extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/marion-cotillard.jpg'),
+            image: _image == null
+                ? AssetImage('assets/images/marion-cotillard.jpg')
+                // : Image.file(_image),
+                // : AssetImage('assets/images/slider1.jpg'),
+                : FileImage(_image),
             fit: BoxFit.cover,
           ),
           borderRadius: BorderRadius.circular(200)),
@@ -29,7 +55,7 @@ class CustomerAvatar extends StatelessWidget {
                   color: Colors.grey[500],
                   size: 27,
                 ),
-                onPressed: () {},
+                onPressed: getImage,
               ),
             ),
           )
